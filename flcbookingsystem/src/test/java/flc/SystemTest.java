@@ -21,6 +21,7 @@ public class SystemTest {
     private Member m1, m2, m3, m4, m5;
 
     @BeforeEach
+    @SuppressWarnings("unused")
     void setUp() {
 
         // ✅ Correct constructor using enums

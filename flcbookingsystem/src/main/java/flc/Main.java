@@ -1,8 +1,16 @@
 package flc;
 
-import flc.model.*;
-import flc.system.*;
-import java.util.*;
+import java.util.List;
+import java.util.Random;
+
+import flc.model.Day;
+import flc.model.Exercise;
+import flc.model.Lesson;
+import flc.model.Member;
+import flc.model.Review;
+import flc.model.TimeSlot;
+import flc.system.FLCSystem;
+import flc.gui.FLCReportGUI;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +20,7 @@ public class Main {
         Exercise yoga = new Exercise("Yoga", 10);
         Exercise zumba = new Exercise("Zumba", 12);
         Exercise boxfit = new Exercise("BoxFit", 15);
+        @SuppressWarnings("unused")
         Exercise aquacise = new Exercise("Aquacise", 8);
 
         // 48 lessons
@@ -46,7 +55,7 @@ public class Main {
         }
 
         // Reports
-        system.generateAttendanceReport();
-        system.generateIncomeReport();
+        FLCReportGUI gui = new FLCReportGUI(system);
+        gui.setVisible(true);
     }
 }
