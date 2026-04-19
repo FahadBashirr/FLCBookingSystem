@@ -1,7 +1,0 @@
-{
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "workbench.externalBrowser": "chrome",
-    "debug.javascript.defaultRuntimeExecutable": {
-        "pwa-node": "node"
-    }
-}
